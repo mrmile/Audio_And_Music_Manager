@@ -31,6 +31,10 @@ The speakers at the center of the screen represent the point from wich spatial a
 
  - [mrmile](https://github.com/mrmile) 
 
+## Sources
+
+-[SDL_Mixel library](https://www.libsdl.org/projects/SDL_mixer/)
+
 ## License
 
 This project is licensed under an unmodified MIT license, which is an OSI-certified license that allows static linking with closed source software. Check [LICENSE](LICENSE) for further details.
