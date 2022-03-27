@@ -1,29 +1,36 @@
-# {Project Name}
+# Audio and Music Manager
 
 ## Description
 
-{project description}
+Audio and Music Manager made with SDL Mixer library.
 
 ## Key Features
 
- - {Feature01}
- - {Feature02}
- - {Feature03}
- - {Feature04}
+ - Play sounds spatially
+ - Play diegetic music tracks (spatially)
+ - Play music tracks
+ - Music track manager
+
+The speakers at the center of the screen represent the point from wich spatial audio is generated and the character the point from wich the audio is listened.
  
 ## Controls
 
- - {ControlsScheme}
+ - F1: Play sound 1
+ - F2: Play sound 2
+ - F3: Play sound 3
+ - F4: Play sound 4 (modular sound)
 
-## Developers
+ - F5: Switch off music
+ - F6: Switch to track 1
+ - F7: Switch to track 2
+ - F8: Switch music play mode (spatially or not)
 
- - {Dev01} - {Role(s)}
- - {Dev02} - {Role(s)}
- - {Dev03} - {Role(s)}
- - {Dev04} - {Role(s)}
+ - Arrow Keys: Move character
+
+## Developer
+
+ - [mrmile](https://github.com/mrmile) 
 
 ## License
 
 This project is licensed under an unmodified MIT license, which is an OSI-certified license that allows static linking with closed source software. Check [LICENSE](LICENSE) for further details.
-
-{AdditionalLicenses}
