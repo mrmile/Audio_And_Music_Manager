@@ -103,8 +103,9 @@ bool Scene::Update(float dt)
 
 	if (app->input->GetKey(SDL_SCANCODE_F4) == KEY_REPEAT)
 	{
-		//Todo 4.4: Use the new playFX function together with some logic to play the modular "ventWalk" sound effect
+		//Todo 4.4: Use the new playFX function to play the modular "ventWalk" sound effect
 		//(the speakers center coordinates are { 640, 360 })
+		//Note that modular sounds require extra logic in addition to the playFx function
 		if (sceneTimer % 24 == 0)
 		{
 			app->audio->PlayFx(ventWalk[ventWalkSoundID], { 640, 360 });

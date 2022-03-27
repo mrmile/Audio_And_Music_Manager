@@ -185,7 +185,7 @@ bool Audio::PlayFx(unsigned int id, iPoint soundGeneratorPosition, int repeat)
 	if(!active)
 		return false;
 
-	// Todo 3: Finish the new PlayFx() function to be able to play sound effects spatially
+	// Todo 3: Finish the new PlayFx function to be able to play sound effects spatially
 	int setChunkVolume = FX_VOLUME - (sqrt(pow(app->player->position.x - soundGeneratorPosition.x, 2) + pow(app->player->position.y - soundGeneratorPosition.y, 2)) / 6);
 
 	if (setChunkVolume <= 0) setChunkVolume = 0;
