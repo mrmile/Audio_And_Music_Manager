@@ -19,12 +19,12 @@ The speakers at the center of the screen represent the point from wich spatial a
  - F2: Play sound 2
  - F3: Play sound 3
  - F4: Play sound 4 (modular sound)
-
+---
  - F5: Switch off music
  - F6: Switch to track 1
  - F7: Switch to track 2
  - F8: Switch music play mode (spatially or not)
-
+---
  - Arrow Keys: Move character
 
 ## Developer
