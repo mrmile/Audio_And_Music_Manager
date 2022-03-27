@@ -33,7 +33,7 @@ The speakers at the center of the screen represent the point from wich spatial a
 
 ## Sources
 
--[SDL_Mixel library](https://www.libsdl.org/projects/SDL_mixer/)
+- [SDL_Mixel library](https://www.libsdl.org/projects/SDL_mixer/)
 
 ## License
 
