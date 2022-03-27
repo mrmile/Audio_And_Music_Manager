@@ -82,21 +82,29 @@ bool Scene::Update(float dt)
 
 	if (app->input->GetKey(SDL_SCANCODE_F1) == KEY_DOWN)
 	{
+		//Todo 4.1: Use the new playFX function to play glassBreak sound effect spatially
+		//(the speakers center coordinates are { 640, 360 })
 		app->audio->PlayFx(glassBreak, { 640, 360 });
 	}
 
 	if (app->input->GetKey(SDL_SCANCODE_F2) == KEY_DOWN)
 	{
+		//Todo 4.2: Use the new playFX function to play steamValve sound effect spatially
+		//(the speakers center coordinates are { 640, 360 })
 		app->audio->PlayFx(steamValve, { 640, 360 });
 	}
 
 	if (app->input->GetKey(SDL_SCANCODE_F3) == KEY_DOWN)
 	{
+		//Todo 4.3: Use the new playFX function to play activationSound sound effect spatially
+		//(the speakers center coordinates are { 640, 360 })
 		app->audio->PlayFx(activationSound, { 640, 360 });
 	}
 
 	if (app->input->GetKey(SDL_SCANCODE_F4) == KEY_REPEAT)
 	{
+		//Todo 4.4: Use the new playFX function together with some logic to play the modular "ventWalk" sound effect
+		//(the speakers center coordinates are { 640, 360 })
 		if (sceneTimer % 24 == 0)
 		{
 			app->audio->PlayFx(ventWalk[ventWalkSoundID], { 640, 360 });
@@ -109,19 +117,19 @@ bool Scene::Update(float dt)
 
 	if (app->input->GetKey(SDL_SCANCODE_F5) == KEY_DOWN)
 	{
-
+		// Todo 5.1: Use the ChangeMusic function to switch the music to OFF (feel free to experiment with fades)
 		app->audio->ChangeMusic(OFF, 0.0f, 0.0f);
 	}
 
 	if (app->input->GetKey(SDL_SCANCODE_F6) == KEY_DOWN)
 	{
-
+		// Todo 5.2: Use the ChangeMusic function to switch the music to EL_BOOM (feel free to experiment with fades)
 		app->audio->ChangeMusic(EL_BOOM, 1.0f, 1.0f);
 	}
 
 	if (app->input->GetKey(SDL_SCANCODE_F7) == KEY_DOWN)
 	{
-
+		// Todo 5.3: Use the ChangeMusic function to switch the music to PRENDE_UN_PORRO (feel free to experiment with fades)
 		app->audio->ChangeMusic(PRENDE_UN_PORRO, 1.0f, 1.0f);
 	}
 
@@ -130,8 +138,11 @@ bool Scene::Update(float dt)
 		app->audio->playMusicSpatially = !app->audio->playMusicSpatially;
 	}
 
+	
 	if (app->audio->playMusicSpatially == true)
 	{
+		// Todo 6: Use the PlayMusicSpatially function to play music spatially when switched on
+		//(the speakers center coordinates are { 640, 360 })
 		app->audio->PlayMusicSpatially({ 640, 360 });
 	}
 

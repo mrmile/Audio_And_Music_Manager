@@ -63,12 +63,10 @@ void App::AddModule(Module* module)
 // Called before render is available
 bool App::Awake()
 {
-	// TODO 3: Load config from XML
 	bool ret = LoadConfig();
 
 	if(ret == true)
 	{
-		// TODO 4: Read the title from the config file
 		title.Create(configApp.child("title").child_value());
 		win->SetTitle(title.GetString());
 
@@ -77,7 +75,6 @@ bool App::Awake()
 
 		while(item != NULL && ret == true)
 		{
-			// TODO 5: Add a new argument to the Awake method to receive a pointer to an xml node.
 			// If the section with the module name exists in config.xml, fill the pointer with the valid xml_node
 			// that can be used to read all variables for that module.
 			// Send nullptr if the node does not exist in config.xml
@@ -132,10 +129,8 @@ bool App::LoadConfig()
 {
 	bool ret = true;
 
-	// TODO 3: Load config.xml file using load_file() method from the xml_document class
 	pugi::xml_parse_result result = configFile.load_file("config.xml");
 
-	// TODO 3: Check result for loading errors
 	if(result == NULL)
 	{
 		LOG("Could not load map xml file config.xml. pugi error: %s", result.description());

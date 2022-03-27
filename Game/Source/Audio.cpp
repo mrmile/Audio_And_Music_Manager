@@ -185,11 +185,10 @@ bool Audio::PlayFx(unsigned int id, iPoint soundGeneratorPosition, int repeat)
 	if(!active)
 		return false;
 
+	// Todo 3: Finish the new PlayFx() function to be able to play sound effects spatially
 	int setChunkVolume = FX_VOLUME - (sqrt(pow(app->player->position.x - soundGeneratorPosition.x, 2) + pow(app->player->position.y - soundGeneratorPosition.y, 2)) / 6);
 
 	if (setChunkVolume <= 0) setChunkVolume = 0;
-
-	//cout << setChunkVolume << endl;
 
 	if(id > 0 && id <= fx.Count())
 	{
@@ -203,6 +202,7 @@ bool Audio::PlayFx(unsigned int id, iPoint soundGeneratorPosition, int repeat)
 
 bool Audio::ChangeMusic(int Id, float fadeInTime, float fadeOutTime)
 {
+	// Todo 1: Complete the music switcher (an enumerator on Audio.h is given with all the playlist)
 	switch (Id)
 	{
 		case OFF:
@@ -233,13 +233,12 @@ bool Audio::ChangeMusic(int Id, float fadeInTime, float fadeOutTime)
 
 bool Audio::PlayMusicSpatially(iPoint musicGeneratorPosition)
 {
+	// Todo 2: Complete the function to be able to play music tracks spatially
 	int setMusicVolume = MUSIC_VOLUME - (sqrt(pow(app->player->position.x - musicGeneratorPosition.x, 2) + pow(app->player->position.y - musicGeneratorPosition.y, 2)) / 6);
 
 	if (setMusicVolume <= 0) setMusicVolume = 0;
 
 	Mix_VolumeMusic(setMusicVolume);
-
-	//cout << setMusicVolume << endl;
 
 	return true;
 }
