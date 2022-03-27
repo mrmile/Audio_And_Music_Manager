@@ -18,7 +18,7 @@ The speakers at the center of the screen represent the point from wich spatial a
  - F1: Play sound 1
  - F2: Play sound 2
  - F3: Play sound 3
- - F4: Play sound 4 (modular sound)
+ - F4 (hold key): Play sound 4 (modular sound)
 ---
  - F5: Switch off music
  - F6: Switch to track 1
