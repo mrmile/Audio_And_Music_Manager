@@ -125,6 +125,19 @@ In videogames we have 2 types of sound effects: The environment sound effects pr
 
 Environment sound effects are played spatially and background sound effects are allways played at the same volume.
 
+### Spatial sounds
+Every sound can be played spatially. That means that it will be heared at a lower or higher volume depending on the distance between the sound listener and the sound source.
+
+![example_image](https://user-images.githubusercontent.com/73582929/160496047-86251ad2-2cb6-4c98-a6d3-24a0971986f3.png)
+
+Although this may sound tricky, it is actually very simple. The only thing you have to do is set the volume in function of the distance between the two points wich normally are the player (sound listener) and the sprite generating the sound (sound generator).
+
+```markdown
+setVolume = GAME_VOLUME - (sqrt(pow(app->player->position.x - soundGeneratorPosition.x, 2) + pow(app->player->position.y - soundGeneratorPosition.y, 2))
+```
+
+All of this can also be applied in the same way to play music tracks spatially.
+
 ### Playing simple sounds
 To play them spatially the position from wich the sound is played is introduced on the soundGeneratorPosition variable and the volume will vary depending on where the player is.
 ```markdown
@@ -145,19 +158,6 @@ if (sceneTimer % 24 == 0)
 	if (soundID > arraySize) soundID = 0;
 }
 ```
-
-### Spatial sounds
-Every sound can be played spatially. That means that it will be heared at a lower or higher volume depending on the distance between the sound listener and the sound source.
-
-![example_image](https://user-images.githubusercontent.com/73582929/160496047-86251ad2-2cb6-4c98-a6d3-24a0971986f3.png)
-
-Although this may sound tricky, it is actually very simple. The only thing you have to do is set the volume in function of the distance between the two points wich normally are the player (sound listener) and the sprite generating the sound (sound generator).
-
-```markdown
-setVolume = GAME_VOLUME - (sqrt(pow(app->player->position.x - soundGeneratorPosition.x, 2) + pow(app->player->position.y - soundGeneratorPosition.y, 2))
-```
-
-All of this can also be applied in the same way to play music tracks spatially.
 
 ### Code
 - In order to play sounds you just need the actual function to play them:
