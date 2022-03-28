@@ -5,6 +5,7 @@ An audio and music manager is a module in charge of loading, playing sounds effe
 The module should contain the playlist with all music tracks and methods (functions) to do all of the above. Even though you can play audio on a videogame by directly using the plain library or engine functions on the way, it is highly recomended to have an audio manager in order to have your code clean and ordered, avoid strange errors or unexpected bugs and behaviours, and simply make your life easier by having a set of functions that make all the management for you.
 
 Note that all of the code below that you will see is written for this template. Your code may vary in order to accommodate your's.
+Code lines in green are not coments.
 
 ## Music tracks switching
 
@@ -101,7 +102,7 @@ bool Audio::ChangeMusic(int Id, float fadeInTime, float fadeOutTime)
 			Mix_ResumeMusic();
 			
 			app->audio->PlayMusic("Assets/Audio/Music/MusicTrack1.ogg", fadeInTime, fadeOutTime);
-
+			
 			break;
 		}
 		case MUSIC_TRACK_2:
@@ -109,7 +110,7 @@ bool Audio::ChangeMusic(int Id, float fadeInTime, float fadeOutTime)
 			Mix_ResumeMusic();
 
 			app->audio->PlayMusic("Assets/Audio/Music/MusicTrack2.ogg", fadeInTime, fadeOutTime);
-
+			
 			break;
 		}
 	}
@@ -141,7 +142,7 @@ if (sceneTimer % 24 == 0)
 {
 	app->audio->PlayFx(modularSound2List[soundPartID], { 640, 360 });
 	soundID++;
-
+	
 	if (soundID > arraySize) soundID = 0;
 }
 ```
@@ -183,11 +184,11 @@ To play the music spatially you just need the actual function:
 bool Audio::PlayMusicSpatially(iPoint musicGeneratorPosition)
 {
 	int setMusicVolume = MUSIC_VOLUME - (sqrt(pow(app->player->position.x - musicGeneratorPosition.x, 2) + pow(app->player->position.y - musicGeneratorPosition.y, 2)) / 6);
-
+	
 	if (setMusicVolume <= 0) setMusicVolume = 0;
-
+	
 	Mix_VolumeMusic(setMusicVolume);
-
+	
 	return true;
 }
 ```
