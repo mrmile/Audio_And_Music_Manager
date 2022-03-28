@@ -49,8 +49,7 @@ bool Audio::PlayMusic(const char* path, float fadeInTime, float fadeOutTime)
 			Mix_HaltMusic();
 			
 		}
-
-		// this call blocks until fade out is done
+		
 		Mix_FreeMusic(music);
 	}
 
@@ -63,7 +62,6 @@ bool Audio::PlayMusic(const char* path, float fadeInTime, float fadeOutTime)
 	}
 	else
 	{
-
 		if(fadeInTime > 0.0f)
 		{
 			if(Mix_FadeInMusic(music, -1, (int) (fadeInTime * 1000.0f)) < 0)
@@ -101,7 +99,7 @@ bool Audio::ChangeMusic(int Id, float fadeInTime, float fadeOutTime)
 		case MUSIC_TRACK_1:
 		{
 			Mix_ResumeMusic();
-
+			
 			app->audio->PlayMusic("Assets/Audio/Music/MusicTrack1.ogg", fadeInTime, fadeOutTime);
 
 			break;
@@ -141,12 +139,10 @@ When playing a sound, the volume is set once at the beggining, so it will not up
 ```markdown
 if (sceneTimer % 24 == 0)
 {
-		{
-			app->audio->PlayFx(modularSound2List[soundPartID], { 640, 360 });
-			ventWalkSoundID++;
+	app->audio->PlayFx(modularSound2List[soundPartID], { 640, 360 });
+	soundID++;
 
-			if (ventWalkSoundID > 21) ventWalkSoundID = 0;
-		}
+	if (soundID > arraySize) soundID = 0;
 }
 ```
 
@@ -167,7 +163,6 @@ bool Audio::PlayFx(unsigned int id, iPoint soundGeneratorPosition, int repeat)
 	if(id > 0 && id <= fx.Count())
 	{
 		Mix_PlayChannel(-1, fx[id - 1], repeat);
-
 		Mix_VolumeChunk(fx[id - 1], setChunkVolume);
 	}
 
@@ -187,7 +182,6 @@ To play the music spatially you just need the actual function:
 ```markdown
 bool Audio::PlayMusicSpatially(iPoint musicGeneratorPosition)
 {
-	// Todo 2: Complete the function to be able to play music tracks spatially
 	int setMusicVolume = MUSIC_VOLUME - (sqrt(pow(app->player->position.x - musicGeneratorPosition.x, 2) + pow(app->player->position.y - musicGeneratorPosition.y, 2)) / 6);
 
 	if (setMusicVolume <= 0) setMusicVolume = 0;
