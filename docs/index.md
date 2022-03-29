@@ -2,7 +2,7 @@
 
 An audio and music manager is a module in charge of loading, playing sounds effects and music tracks and switching between them. It should also be able to play them spatially.
 
-The module should contain the playlist with all music tracks and methods (functions) to do all of the above. Even though you can play audio on a videogame by directly using the plain library or engine functions on the way, it is highly recomended to have an audio manager in order to have your code clean and ordered, avoid strange errors or unexpected bugs and behaviours, and simply make your life easier by having a set of functions that make all the management for you.
+The module should contain the playlist with all music tracks and methods (functions) to do all of the above. Even though you can play audio on a videogame by directly using the plain library or engine functions on the way, it is highly recommended to have an audio manager in order to have your code clean and ordered, avoid strange errors or unexpected bugs and behaviors, and simply make your life easier by having a set of functions that make all the management for you.
 
 Note that all of the code below that you will see is written for this template. Your code may vary in order to accommodate your's.
 
