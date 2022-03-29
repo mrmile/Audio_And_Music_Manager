@@ -9,9 +9,9 @@ Visit github page for detailed information regarding code and functionalities: h
 ## Key Features
 
  - Play sounds spatially
+ - Play background music tracks
  - Play diegetic music tracks (spatially)
- - Play music tracks
- - Music track manager
+ - Music track manager and switcher
 
 The speakers at the center of the screen represent the point from wich spatial audio is generated and the character the point from wich the audio is listened.
  
