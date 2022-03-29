@@ -4,6 +4,8 @@
 
 Audio and Music Manager made with SDL Mixer library.
 
+Visit github page for detailed information regarding code and functionalities: https://mrmile.github.io/Project2_Research/
+
 ## Key Features
 
  - Play sounds spatially
@@ -34,6 +36,7 @@ The speakers at the center of the screen represent the point from wich spatial a
 ## Sources
 
 - [SDL_Mixel library](https://www.libsdl.org/projects/SDL_mixer/)
+- [Code template used as a base for this Audio and music manager construction](https://github.com/raysan5/game_project_template)
 
 ## License
 
