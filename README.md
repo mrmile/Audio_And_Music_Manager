@@ -4,7 +4,7 @@
 
 Audio and Music Manager made with SDL Mixer library.
 
-Visit github page for detailed information regarding code and functionalities: https://mrmile.github.io/Project2_Research/
+Visit github page for detailed information regarding code and functionalities: https://mrmile.github.io/Audio_And_Music_Manager/
 
 ## Key Features
 
